@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
-"""Build the teaches.clingybear.com static site: 15 pages with full SEO."""
-import json, os, html
+"""Build the teaches.clingybear.com static site: 15 pages with full SEO,
+full lesson articles, and video/voiceover media slots driven by assets/media.json."""
+import json, os, html, sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from lesson_content import LESSONS
 
 BASE = "https://teaches.clingybear.com"
 SITE = os.path.dirname(os.path.abspath(__file__))
@@ -222,6 +225,47 @@ EPISODES = [
 
 EP_KW = "Clingy Bear Teaches, AI assistant course, BRAVE method, AI workflows, Chris Pick"
 
+# ---------------------------------------------------------------- media manifest
+# Contract: assets/media.json is keyed by episode page slug
+# ("ep-1-stop-chatting-start-collaborating", ...). A non-empty video_url or
+# voiceover_url renders a real HTML5 <video>/<audio> player; an empty string
+# renders a styled "coming soon" placeholder. To wire in Chris's files later:
+# put the file URL in media.json and rebuild (python3 build.py).
+MEDIA = {f"ep-{n}-{slug}": {"video_url": "", "voiceover_url": ""}
+         for n, slug, *_ in EPISODES}
+MEDIA_PATH = os.path.join(SITE, "assets", "media.json")
+os.makedirs(os.path.dirname(MEDIA_PATH), exist_ok=True)
+with open(MEDIA_PATH, "w") as f:
+    json.dump(MEDIA, f, indent=2)
+print("wrote assets/media.json (12 episodes, blank URLs)")
+
+def media_block(key, n, title):
+    """Video + voiceover slots: real players when URLs are set, styled
+    placeholders otherwise."""
+    m = MEDIA.get(key, {})
+    vurl, aurl = m.get("video_url", ""), m.get("voiceover_url", "")
+    if vurl:
+        video = (f'<figure class="media-slot has-media">'
+                 f'<video controls preload="metadata" playsinline src="{html.escape(vurl, quote=True)}"></video>'
+                 f'<figcaption>Episode {n} video \u2014 {html.escape(title)}</figcaption></figure>')
+    else:
+        video = ('<figure class="media-slot placeholder" aria-label="Episode video coming soon">'
+                 '<div class="media-empty"><span class="emoji" aria-hidden="true">\U0001F3AC</span>'
+                 '<p><strong>Episode video \u2014 coming soon</strong></p>'
+                 '<p class="hint">Drop in your episode file and it plays here.</p></div></figure>')
+    if aurl:
+        audio = (f'<figure class="media-slot has-media">'
+                 f'<audio controls preload="metadata" src="{html.escape(aurl, quote=True)}"></audio>'
+                 f'<figcaption>Episode {n} voiceover \u2014 {html.escape(title)}</figcaption></figure>')
+    else:
+        audio = ('<figure class="media-slot placeholder" aria-label="Episode voiceover coming soon">'
+                 '<div class="media-empty"><span class="emoji" aria-hidden="true">\U0001F399\uFE0F</span>'
+                 '<p><strong>Voiceover \u2014 coming soon</strong></p>'
+                 '<p class="hint">Drop in your voiceover file and it plays here.</p></div></figure>')
+    return ('<section class="media" aria-label="Episode media">'
+            '<h2>Watch &amp; listen</h2>'
+            '<div class="media-grid">' + video + audio + '</div></section>')
+
 # ---------------------------------------------------------------- home
 home_jsonld = json.dumps({
   "@context": "https://schema.org",
@@ -418,18 +462,30 @@ def prevnext(n, slug):
 
 for n, slug, title, tag, longdesc, beats in EPISODES:
     canon = f"{BASE}/season-1/ep-{n}-{slug}/"
-    beats_html = "\n".join(f"<li>{html.escape(b)}</li>" for b in beats)
+    key = f"ep-{n}-{slug}"
+    L = LESSONS[key]
+    problem_html = "\n".join(f"<p>{html.escape(p)}</p>" for p in L["problem"])
+    steps_html = "\n".join(
+        f"<h3>{html.escape(h)}</h3>\n<p>{html.escape(b)}</p>" for h, b in L["steps"])
+    ex_body = L["example"]
+    take_html = "\n".join(f"<li>{html.escape(t)}</li>" for t in L["takeaways"])
     body = f"""
 {crumbs(("Home", "/"), ("Season 1", "/season-1/"), (f"Episode {n}", None))}
 <p class="epkicker">Season 1 · Episode {n}</p>
 <h1>{html.escape(title)}</h1>
 <p class="lede">{html.escape(tag)}</p>
 <p class="epstatus">This lesson drops soon — <a href="{YT}">subscribe on YouTube</a> so you don't miss it.</p>
-<h2>In this lesson</h2>
-<p>{html.escape(longdesc)}</p>
-<h2>Key beats</h2>
+{media_block(key, n, title)}
+<p class="article-intro">{html.escape(L["intro"])}</p>
+<h2>The problem this lesson solves</h2>
+{problem_html}
+<h2>The lesson, step by step</h2>
+{steps_html}
+<h2>Worked example</h2>
+<p>{html.escape(ex_body)}</p>
+<h2>Your takeaway</h2>
 <ul class="beats">
-{beats_html}
+{take_html}
 </ul>
 <h2>The BRAVE lens</h2>
 <p>Every episode runs through the <a href="/brave/">BRAVE method</a>: brief the outcome, reveal relevant context, authorize the next action, verify the evidence, and evolve the system.</p>

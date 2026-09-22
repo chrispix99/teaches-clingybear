@@ -93,16 +93,509 @@ gtag('config', 'G-S5WCYTCSVP');
 <h1>Make the Miles Work Harder</h1>
 <p class="lede">Travel constraints, points, routes, and verification.</p>
 <p class="epstatus">This lesson drops soon — <a href="https://www.youtube.com/@ClingyBearTeaches">subscribe on YouTube</a> so you don't miss it.</p>
-<h2>In this lesson</h2>
-<p>Points and miles are an optimization problem — and the assistant can&#x27;t solve it without your real constraints. Build the travel brief, define the objective function (cheapest cash, fewest points, best cents per point, best elite-qualifying return, and lowest disruption risk are different winners), and verify at decision time.</p>
-<h2>Key beats</h2>
+<section class="media" aria-label="Episode media"><h2>Watch &amp; listen</h2><div class="media-grid"><figure class="media-slot placeholder" aria-label="Episode video coming soon"><div class="media-empty"><span class="emoji" aria-hidden="true">🎬</span><p><strong>Episode video — coming soon</strong></p><p class="hint">Drop in your episode file and it plays here.</p></div></figure><figure class="media-slot placeholder" aria-label="Episode voiceover coming soon"><div class="media-empty"><span class="emoji" aria-hidden="true">🎙️</span><p><strong>Voiceover — coming soon</strong></p><p class="hint">Drop in your voiceover file and it plays here.</p></div></figure></div></section>
+<p class="article-intro">Points and miles are an optimization problem — and your assistant can’t solve it without your real constraints. This lesson builds the travel brief, defines the objective function, teaches honest cash-versus-points math, and separates strategy (which can be explored broadly) from booking (which must be verified live). The prize: trips that cost less in every currency that matters.</p>
+<h2>The problem this lesson solves</h2>
+<p>“</p>
+<p>F</p>
+<p>i</p>
+<p>n</p>
+<p>d</p>
+<p> </p>
+<p>m</p>
+<p>e</p>
+<p> </p>
+<p>a</p>
+<p> </p>
+<p>c</p>
+<p>h</p>
+<p>e</p>
+<p>a</p>
+<p>p</p>
+<p> </p>
+<p>f</p>
+<p>l</p>
+<p>i</p>
+<p>g</p>
+<p>h</p>
+<p>t</p>
+<p>”</p>
+<p> </p>
+<p>i</p>
+<p>g</p>
+<p>n</p>
+<p>o</p>
+<p>r</p>
+<p>e</p>
+<p>s</p>
+<p> </p>
+<p>t</p>
+<p>h</p>
+<p>e</p>
+<p> </p>
+<p>t</p>
+<p>h</p>
+<p>i</p>
+<p>n</p>
+<p>g</p>
+<p>s</p>
+<p> </p>
+<p>t</p>
+<p>h</p>
+<p>a</p>
+<p>t</p>
+<p> </p>
+<p>a</p>
+<p>c</p>
+<p>t</p>
+<p>u</p>
+<p>a</p>
+<p>l</p>
+<p>l</p>
+<p>y</p>
+<p> </p>
+<p>d</p>
+<p>e</p>
+<p>c</p>
+<p>i</p>
+<p>d</p>
+<p>e</p>
+<p> </p>
+<p>a</p>
+<p> </p>
+<p>t</p>
+<p>r</p>
+<p>i</p>
+<p>p</p>
+<p>:</p>
+<p> </p>
+<p>y</p>
+<p>o</p>
+<p>u</p>
+<p>r</p>
+<p> </p>
+<p>s</p>
+<p>t</p>
+<p>a</p>
+<p>t</p>
+<p>u</p>
+<p>s</p>
+<p>,</p>
+<p> </p>
+<p>y</p>
+<p>o</p>
+<p>u</p>
+<p>r</p>
+<p> </p>
+<p>b</p>
+<p>a</p>
+<p>g</p>
+<p>s</p>
+<p>,</p>
+<p> </p>
+<p>y</p>
+<p>o</p>
+<p>u</p>
+<p>r</p>
+<p> </p>
+<p>t</p>
+<p>i</p>
+<p>m</p>
+<p>e</p>
+<p> </p>
+<p>w</p>
+<p>i</p>
+<p>n</p>
+<p>d</p>
+<p>o</p>
+<p>w</p>
+<p>s</p>
+<p>,</p>
+<p> </p>
+<p>p</p>
+<p>o</p>
+<p>s</p>
+<p>i</p>
+<p>t</p>
+<p>i</p>
+<p>o</p>
+<p>n</p>
+<p>i</p>
+<p>n</p>
+<p>g</p>
+<p> </p>
+<p>f</p>
+<p>l</p>
+<p>i</p>
+<p>g</p>
+<p>h</p>
+<p>t</p>
+<p>s</p>
+<p>,</p>
+<p> </p>
+<p>c</p>
+<p>a</p>
+<p>n</p>
+<p>c</p>
+<p>e</p>
+<p>l</p>
+<p>l</p>
+<p>a</p>
+<p>t</p>
+<p>i</p>
+<p>o</p>
+<p>n</p>
+<p> </p>
+<p>t</p>
+<p>e</p>
+<p>r</p>
+<p>m</p>
+<p>s</p>
+<p>,</p>
+<p> </p>
+<p>a</p>
+<p>n</p>
+<p>d</p>
+<p> </p>
+<p>w</p>
+<p>h</p>
+<p>e</p>
+<p>t</p>
+<p>h</p>
+<p>e</p>
+<p>r</p>
+<p> </p>
+<p>a</p>
+<p>w</p>
+<p>a</p>
+<p>r</p>
+<p>d</p>
+<p> </p>
+<p>s</p>
+<p>e</p>
+<p>a</p>
+<p>t</p>
+<p>s</p>
+<p> </p>
+<p>e</p>
+<p>v</p>
+<p>e</p>
+<p>n</p>
+<p> </p>
+<p>e</p>
+<p>x</p>
+<p>i</p>
+<p>s</p>
+<p>t</p>
+<p> </p>
+<p>r</p>
+<p>i</p>
+<p>g</p>
+<p>h</p>
+<p>t</p>
+<p> </p>
+<p>n</p>
+<p>o</p>
+<p>w</p>
+<p>.</p>
+<p> </p>
+<p>W</p>
+<p>o</p>
+<p>r</p>
+<p>s</p>
+<p>e</p>
+<p>,</p>
+<p> </p>
+<p>a</p>
+<p> </p>
+<p>s</p>
+<p>i</p>
+<p>n</p>
+<p>g</p>
+<p>l</p>
+<p>e</p>
+<p> </p>
+<p>“</p>
+<p>p</p>
+<p>o</p>
+<p>i</p>
+<p>n</p>
+<p>t</p>
+<p>s</p>
+<p> </p>
+<p>a</p>
+<p>r</p>
+<p>e</p>
+<p> </p>
+<p>w</p>
+<p>o</p>
+<p>r</p>
+<p>t</p>
+<p>h</p>
+<p> </p>
+<p>1</p>
+<p>.</p>
+<p>5</p>
+<p> </p>
+<p>c</p>
+<p>e</p>
+<p>n</p>
+<p>t</p>
+<p>s</p>
+<p>”</p>
+<p> </p>
+<p>v</p>
+<p>a</p>
+<p>l</p>
+<p>u</p>
+<p>a</p>
+<p>t</p>
+<p>i</p>
+<p>o</p>
+<p>n</p>
+<p> </p>
+<p>q</p>
+<p>u</p>
+<p>i</p>
+<p>e</p>
+<p>t</p>
+<p>l</p>
+<p>y</p>
+<p> </p>
+<p>p</p>
+<p>i</p>
+<p>c</p>
+<p>k</p>
+<p>s</p>
+<p> </p>
+<p>w</p>
+<p>i</p>
+<p>n</p>
+<p>n</p>
+<p>e</p>
+<p>r</p>
+<p>s</p>
+<p> </p>
+<p>t</p>
+<p>h</p>
+<p>a</p>
+<p>t</p>
+<p> </p>
+<p>l</p>
+<p>o</p>
+<p>s</p>
+<p>e</p>
+<p> </p>
+<p>o</p>
+<p>n</p>
+<p> </p>
+<p>e</p>
+<p>v</p>
+<p>e</p>
+<p>r</p>
+<p>y</p>
+<p> </p>
+<p>o</p>
+<p>t</p>
+<p>h</p>
+<p>e</p>
+<p>r</p>
+<p> </p>
+<p>a</p>
+<p>x</p>
+<p>i</p>
+<p>s</p>
+<p>.</p>
+<p> </p>
+<p>T</p>
+<p>h</p>
+<p>e</p>
+<p> </p>
+<p>p</p>
+<p>r</p>
+<p>o</p>
+<p>b</p>
+<p>l</p>
+<p>e</p>
+<p>m</p>
+<p> </p>
+<p>t</p>
+<p>h</p>
+<p>i</p>
+<p>s</p>
+<p> </p>
+<p>l</p>
+<p>e</p>
+<p>s</p>
+<p>s</p>
+<p>o</p>
+<p>n</p>
+<p> </p>
+<p>s</p>
+<p>o</p>
+<p>l</p>
+<p>v</p>
+<p>e</p>
+<p>s</p>
+<p> </p>
+<p>i</p>
+<p>s</p>
+<p> </p>
+<p>g</p>
+<p>i</p>
+<p>v</p>
+<p>i</p>
+<p>n</p>
+<p>g</p>
+<p> </p>
+<p>t</p>
+<p>h</p>
+<p>e</p>
+<p> </p>
+<p>a</p>
+<p>s</p>
+<p>s</p>
+<p>i</p>
+<p>s</p>
+<p>t</p>
+<p>a</p>
+<p>n</p>
+<p>t</p>
+<p> </p>
+<p>t</p>
+<p>h</p>
+<p>e</p>
+<p> </p>
+<p>f</p>
+<p>u</p>
+<p>l</p>
+<p>l</p>
+<p> </p>
+<p>c</p>
+<p>o</p>
+<p>n</p>
+<p>s</p>
+<p>t</p>
+<p>r</p>
+<p>a</p>
+<p>i</p>
+<p>n</p>
+<p>t</p>
+<p> </p>
+<p>s</p>
+<p>e</p>
+<p>t</p>
+<p> </p>
+<p>a</p>
+<p>n</p>
+<p>d</p>
+<p> </p>
+<p>t</p>
+<p>h</p>
+<p>e</p>
+<p> </p>
+<p>r</p>
+<p>e</p>
+<p>a</p>
+<p>l</p>
+<p> </p>
+<p>o</p>
+<p>b</p>
+<p>j</p>
+<p>e</p>
+<p>c</p>
+<p>t</p>
+<p>i</p>
+<p>v</p>
+<p>e</p>
+<p> </p>
+<p>—</p>
+<p> </p>
+<p>s</p>
+<p>o</p>
+<p> </p>
+<p>i</p>
+<p>t</p>
+<p>s</p>
+<p> </p>
+<p>r</p>
+<p>e</p>
+<p>c</p>
+<p>o</p>
+<p>m</p>
+<p>m</p>
+<p>e</p>
+<p>n</p>
+<p>d</p>
+<p>a</p>
+<p>t</p>
+<p>i</p>
+<p>o</p>
+<p>n</p>
+<p> </p>
+<p>o</p>
+<p>p</p>
+<p>t</p>
+<p>i</p>
+<p>m</p>
+<p>i</p>
+<p>z</p>
+<p>e</p>
+<p>s</p>
+<p> </p>
+<p>y</p>
+<p>o</p>
+<p>u</p>
+<p>r</p>
+<p> </p>
+<p>t</p>
+<p>r</p>
+<p>i</p>
+<p>p</p>
+<p>,</p>
+<p> </p>
+<p>n</p>
+<p>o</p>
+<p>t</p>
+<p> </p>
+<p>a</p>
+<p> </p>
+<p>g</p>
+<p>e</p>
+<p>n</p>
+<p>e</p>
+<p>r</p>
+<p>i</p>
+<p>c</p>
+<p> </p>
+<p>o</p>
+<p>n</p>
+<p>e</p>
+<p>.</p>
+<h2>The lesson, step by step</h2>
+<h3>Build the travel brief</h3>
+<p>Traveler, exact dates, origin and destination, time windows, bags, elite status, points balances, flexibility, and deal-breakers. Every field earns its place: bags change the fare math, status changes the upgrade math, deal-breakers (no red-eyes, no basic economy) prune the search before it starts.</p>
+<h3>Define the objective function — there isn’t one winner</h3>
+<p>Cheapest cash fare, fewest points, best cents per point, best elite-qualifying return, and lowest disruption risk are different winners. Say which game you’re playing before comparing options, or you’ll compare a sprinter to a marathoner.</p>
+<h3>Do cash-versus-points math without worshiping one valuation</h3>
+<p>Compare cash saved, taxes and fees, cancellation terms, and opportunity cost — not a single cents-per-point number treated as scripture. A “great redemption” with brutal cancellation terms can be the worse deal.</p>
+<h3>Separate planning from live booking</h3>
+<p>Routes and strategy can be explored broadly and slowly. Schedules, award inventory, and fares must be checked at decision time — they change, and yesterday’s availability is a rumor. The lesson labels every number with its freshness.</p>
+<h3>Account for the whole trip</h3>
+<p>Positioning flights, hotel, ground transport, lounge access, baggage, missed-connection risk. The “cheap” itinerary that strands you overnight in a connection city wasn’t cheap.</p>
+<h3>Ask for a recommendation and the best alternative</h3>
+<p>Demand both, with reasons tied to your stated priorities — not generic pros and cons. The alternative is what makes the recommendation trustworthy: it proves the comparison was real.</p>
+<h3>Run the final verification checklist before purchasing</h3>
+<p>Re-check fare, inventory, dates, traveler details, baggage rules, and cancellation terms immediately before paying. The checklist is the last BRAVE verify stage, applied to money.</p>
+<h2>Worked example</h2>
+<p>Two itineraries, same trip. Option A: fewest points, but a tight connection and no lounge on a six-hour layover. Option B: slightly more points, a sane connection, and it earns elite-qualifying credit toward status you’re 2,000 miles short of. Under “cheapest points” A wins; under “lowest disruption + status progress” B wins by a mile. The brief you wrote in step one decides — which is exactly why you write it before comparing anything.</p>
+<h2>Your takeaway</h2>
 <ul class="beats">
-<li>Build the travel brief: traveler, dates, origin and destination, time windows, bags, status, points balances, flexibility, deal-breakers</li>
-<li>Define the objective function — different winners for cheapest cash, fewest points, cents per point, elite-qualifying return, disruption risk</li>
-<li>Cash-versus-points math without worshiping a single valuation: cash saved, taxes, cancellation terms, opportunity cost</li>
-<li>Separate planning from live booking: strategy can be explored broadly, but fares and award inventory must be checked at decision time</li>
-<li>Account for the whole trip: positioning flights, hotel, ground transport, lounges, baggage, missed-connection risk</li>
-<li>Run a final verification checklist before purchasing</li>
+<li>Write the travel brief first: dates, constraints, status, balances, deal-breakers.</li>
+<li>Name your objective — cheapest cash, fewest points, status, or lowest risk are different games.</li>
+<li>Do full cash-vs-points math: taxes, cancellation, opportunity cost.</li>
+<li>Strategy can be old; fares and award inventory must be checked at decision time.</li>
+<li>Price the whole trip, then verify everything again before you pay.</li>
 </ul>
 <h2>The BRAVE lens</h2>
 <p>Every episode runs through the <a href="/brave/">BRAVE method</a>: brief the outcome, reveal relevant context, authorize the next action, verify the evidence, and evolve the system.</p>

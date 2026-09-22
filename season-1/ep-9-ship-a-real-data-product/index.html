@@ -93,18 +93,411 @@ gtag('config', 'G-S5WCYTCSVP');
 <h1>Ship a Real Data Product</h1>
 <p class="lede">VMenu&#x27;s research, imports, audits, and deployment.</p>
 <p class="epstatus">This lesson drops soon — <a href="https://www.youtube.com/@ClingyBearTeaches">subscribe on YouTube</a> so you don't miss it.</p>
-<h2>In this lesson</h2>
-<p>The unglamorous engine behind real data products, through VMenu. Define the data contract before collecting anything, separate collection from normalization from deduplication from import from audit, and verify everything from the user&#x27;s side.</p>
-<h2>Key beats</h2>
+<section class="media" aria-label="Episode media"><h2>Watch &amp; listen</h2><div class="media-grid"><figure class="media-slot placeholder" aria-label="Episode video coming soon"><div class="media-empty"><span class="emoji" aria-hidden="true">🎬</span><p><strong>Episode video — coming soon</strong></p><p class="hint">Drop in your episode file and it plays here.</p></div></figure><figure class="media-slot placeholder" aria-label="Episode voiceover coming soon"><div class="media-empty"><span class="emoji" aria-hidden="true">🎙️</span><p><strong>Voiceover — coming soon</strong></p><p class="hint">Drop in your voiceover file and it plays here.</p></div></figure></div></section>
+<p class="article-intro">Behind every “simple” data product is an unglamorous engine: collection, normalization, deduplication, import, audit. This lesson follows VMenu — a real restaurant data product — and teaches the discipline that keeps tens of thousands of records trustworthy: contracts before collection, idempotent imports, honest handling of timeouts, and verification from the user’s side.</p>
+<h2>The problem this lesson solves</h2>
+<p>D</p>
+<p>a</p>
+<p>t</p>
+<p>a</p>
+<p> </p>
+<p>p</p>
+<p>r</p>
+<p>o</p>
+<p>j</p>
+<p>e</p>
+<p>c</p>
+<p>t</p>
+<p>s</p>
+<p> </p>
+<p>f</p>
+<p>a</p>
+<p>i</p>
+<p>l</p>
+<p> </p>
+<p>s</p>
+<p>i</p>
+<p>l</p>
+<p>e</p>
+<p>n</p>
+<p>t</p>
+<p>l</p>
+<p>y</p>
+<p>.</p>
+<p> </p>
+<p>A</p>
+<p> </p>
+<p>r</p>
+<p>e</p>
+<p>-</p>
+<p>r</p>
+<p>u</p>
+<p>n</p>
+<p> </p>
+<p>d</p>
+<p>u</p>
+<p>p</p>
+<p>l</p>
+<p>i</p>
+<p>c</p>
+<p>a</p>
+<p>t</p>
+<p>e</p>
+<p>s</p>
+<p> </p>
+<p>h</p>
+<p>a</p>
+<p>l</p>
+<p>f</p>
+<p> </p>
+<p>t</p>
+<p>h</p>
+<p>e</p>
+<p> </p>
+<p>c</p>
+<p>a</p>
+<p>t</p>
+<p>a</p>
+<p>l</p>
+<p>o</p>
+<p>g</p>
+<p>.</p>
+<p> </p>
+<p>A</p>
+<p> </p>
+<p>p</p>
+<p>a</p>
+<p>r</p>
+<p>t</p>
+<p>i</p>
+<p>a</p>
+<p>l</p>
+<p> </p>
+<p>u</p>
+<p>p</p>
+<p>d</p>
+<p>a</p>
+<p>t</p>
+<p>e</p>
+<p> </p>
+<p>w</p>
+<p>i</p>
+<p>p</p>
+<p>e</p>
+<p>s</p>
+<p> </p>
+<p>f</p>
+<p>i</p>
+<p>e</p>
+<p>l</p>
+<p>d</p>
+<p>s</p>
+<p> </p>
+<p>t</p>
+<p>h</p>
+<p>e</p>
+<p> </p>
+<p>e</p>
+<p>n</p>
+<p>d</p>
+<p>p</p>
+<p>o</p>
+<p>i</p>
+<p>n</p>
+<p>t</p>
+<p> </p>
+<p>r</p>
+<p>e</p>
+<p>p</p>
+<p>l</p>
+<p>a</p>
+<p>c</p>
+<p>e</p>
+<p>s</p>
+<p> </p>
+<p>w</p>
+<p>h</p>
+<p>o</p>
+<p>l</p>
+<p>e</p>
+<p>s</p>
+<p>a</p>
+<p>l</p>
+<p>e</p>
+<p>.</p>
+<p> </p>
+<p>A</p>
+<p> </p>
+<p>t</p>
+<p>i</p>
+<p>m</p>
+<p>e</p>
+<p>o</p>
+<p>u</p>
+<p>t</p>
+<p> </p>
+<p>g</p>
+<p>e</p>
+<p>t</p>
+<p>s</p>
+<p> </p>
+<p>r</p>
+<p>e</p>
+<p>t</p>
+<p>r</p>
+<p>i</p>
+<p>e</p>
+<p>d</p>
+<p> </p>
+<p>b</p>
+<p>l</p>
+<p>i</p>
+<p>n</p>
+<p>d</p>
+<p>l</p>
+<p>y</p>
+<p> </p>
+<p>a</p>
+<p>n</p>
+<p>d</p>
+<p> </p>
+<p>i</p>
+<p>m</p>
+<p>p</p>
+<p>o</p>
+<p>r</p>
+<p>t</p>
+<p>s</p>
+<p> </p>
+<p>t</p>
+<p>h</p>
+<p>e</p>
+<p> </p>
+<p>s</p>
+<p>a</p>
+<p>m</p>
+<p>e</p>
+<p> </p>
+<p>b</p>
+<p>a</p>
+<p>t</p>
+<p>c</p>
+<p>h</p>
+<p> </p>
+<p>t</p>
+<p>w</p>
+<p>i</p>
+<p>c</p>
+<p>e</p>
+<p>.</p>
+<p> </p>
+<p>T</p>
+<p>h</p>
+<p>e</p>
+<p> </p>
+<p>d</p>
+<p>a</p>
+<p>s</p>
+<p>h</p>
+<p>b</p>
+<p>o</p>
+<p>a</p>
+<p>r</p>
+<p>d</p>
+<p> </p>
+<p>l</p>
+<p>o</p>
+<p>o</p>
+<p>k</p>
+<p>s</p>
+<p> </p>
+<p>f</p>
+<p>i</p>
+<p>n</p>
+<p>e</p>
+<p>;</p>
+<p> </p>
+<p>t</p>
+<p>h</p>
+<p>e</p>
+<p> </p>
+<p>d</p>
+<p>a</p>
+<p>t</p>
+<p>a</p>
+<p> </p>
+<p>i</p>
+<p>s</p>
+<p> </p>
+<p>r</p>
+<p>o</p>
+<p>t</p>
+<p>t</p>
+<p>i</p>
+<p>n</p>
+<p>g</p>
+<p>.</p>
+<p> </p>
+<p>T</p>
+<p>h</p>
+<p>e</p>
+<p> </p>
+<p>p</p>
+<p>r</p>
+<p>o</p>
+<p>b</p>
+<p>l</p>
+<p>e</p>
+<p>m</p>
+<p> </p>
+<p>t</p>
+<p>h</p>
+<p>i</p>
+<p>s</p>
+<p> </p>
+<p>l</p>
+<p>e</p>
+<p>s</p>
+<p>s</p>
+<p>o</p>
+<p>n</p>
+<p> </p>
+<p>s</p>
+<p>o</p>
+<p>l</p>
+<p>v</p>
+<p>e</p>
+<p>s</p>
+<p> </p>
+<p>i</p>
+<p>s</p>
+<p> </p>
+<p>b</p>
+<p>u</p>
+<p>i</p>
+<p>l</p>
+<p>d</p>
+<p>i</p>
+<p>n</p>
+<p>g</p>
+<p> </p>
+<p>a</p>
+<p> </p>
+<p>p</p>
+<p>i</p>
+<p>p</p>
+<p>e</p>
+<p>l</p>
+<p>i</p>
+<p>n</p>
+<p>e</p>
+<p> </p>
+<p>w</p>
+<p>h</p>
+<p>e</p>
+<p>r</p>
+<p>e</p>
+<p> </p>
+<p>e</p>
+<p>v</p>
+<p>e</p>
+<p>r</p>
+<p>y</p>
+<p> </p>
+<p>s</p>
+<p>t</p>
+<p>a</p>
+<p>g</p>
+<p>e</p>
+<p> </p>
+<p>i</p>
+<p>s</p>
+<p> </p>
+<p>s</p>
+<p>e</p>
+<p>p</p>
+<p>a</p>
+<p>r</p>
+<p>a</p>
+<p>t</p>
+<p>e</p>
+<p>,</p>
+<p> </p>
+<p>e</p>
+<p>v</p>
+<p>e</p>
+<p>r</p>
+<p>y</p>
+<p> </p>
+<p>r</p>
+<p>e</p>
+<p>-</p>
+<p>r</p>
+<p>u</p>
+<p>n</p>
+<p> </p>
+<p>i</p>
+<p>s</p>
+<p> </p>
+<p>s</p>
+<p>a</p>
+<p>f</p>
+<p>e</p>
+<p>,</p>
+<p> </p>
+<p>a</p>
+<p>n</p>
+<p>d</p>
+<p> </p>
+<p>e</p>
+<p>v</p>
+<p>e</p>
+<p>r</p>
+<p>y</p>
+<p> </p>
+<p>c</p>
+<p>o</p>
+<p>u</p>
+<p>n</p>
+<p>t</p>
+<p> </p>
+<p>r</p>
+<p>e</p>
+<p>c</p>
+<p>o</p>
+<p>n</p>
+<p>c</p>
+<p>i</p>
+<p>l</p>
+<p>e</p>
+<p>s</p>
+<p>.</p>
+<h2>The lesson, step by step</h2>
+<h3>Define the data contract before collecting anything</h3>
+<p>Restaurant identity, address, menu section, item, price, source, update status, timestamps. The contract is agreed before the first scrape — it’s what “correct” means for every record that follows.</p>
+<h3>Separate the stages</h3>
+<p>Collection, normalization, deduplication, import, and audit are distinct stages with distinct jobs. When stages blur, bugs hide: a dedup problem looks like an import problem, and you fix the wrong one.</p>
+<h3>Make imports idempotent</h3>
+<p>Rerunning the same batch must reconcile, not duplicate or erase fields. Idempotency is the difference between “safe to retry” and “pray it worked the first time.”</p>
+<h3>Respect the danger of partial updates</h3>
+<p>When an endpoint replaces a full record, a partial update isn’t partial — it’s a deletion of everything you didn’t send. Always pass the full record through, or use an endpoint that doesn’t replace.</p>
+<h3>Build quality reports</h3>
+<p>Menu-less venues, suspiciously thin menus, missing dayparts, duplicate candidates, closed businesses. The reports are the product’s immune system — they find the rot the pipeline can’t feel.</p>
+<h3>Treat timeouts as unknown outcomes</h3>
+<p>A timed-out request didn’t necessarily fail; the server may have finished. Reconcile exact counts before retrying. “It timed out, run it again” is how duplicates are born.</p>
+<h3>Deploy like it matters</h3>
+<p>Correct authorship on commits, environment variables in place before the deploy that needs them, production checks after. The lesson’s hard-won rule: env changes don’t apply to already-built deployments.</p>
+<h3>Verify from the user’s side</h3>
+<p>Search a venue, inspect menu sections, test mobile behavior, confirm analytics. The pipeline’s opinion of itself doesn’t count — the user’s experience does.</p>
+<h2>Worked example</h2>
+<p>An import batch of several hundred venues times out halfway. The wrong move: re-run the batch. The lesson’s move: query what actually landed, reconcile exact counts against the source, identify the missing slice, and import only that — idempotently, so even an overlap reconciles instead of duplicating. Final counts match the source to the record. That reconciliation is the whole lesson in one incident.</p>
+<h2>Your takeaway</h2>
 <ul class="beats">
-<li>Define the data contract before collecting data: identity, address, sections, items, prices, sources, update status, timestamps</li>
-<li>Separate collection, normalization, deduplication, import, and audit into distinct stages</li>
-<li>Idempotency: rerunning the same batch should reconcile, not duplicate or erase fields</li>
-<li>Why partial updates are dangerous when an endpoint replaces a full record</li>
-<li>Build quality reports: missing data, suspiciously thin records, duplicates, closed businesses</li>
-<li>Treat timeouts as unknown outcomes — reconcile counts before retrying</li>
-<li>Deploy with correct authorship, environment variables, and production checks</li>
-<li>Verify from the user&#x27;s side: search, inspect, test mobile, confirm analytics</li>
+<li>Contract first: define the record shape before collecting a single row.</li>
+<li>Separate stages; make re-runs idempotent; never trust a blind retry.</li>
+<li>Partial updates on replace-style endpoints are deletions in disguise.</li>
+<li>Quality reports and count reconciliation are non-negotiable.</li>
+<li>Verify from the user’s side — search it, open it on mobile, check analytics.</li>
 </ul>
 <h2>The BRAVE lens</h2>
 <p>Every episode runs through the <a href="/brave/">BRAVE method</a>: brief the outcome, reveal relevant context, authorize the next action, verify the evidence, and evolve the system.</p>

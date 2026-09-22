@@ -93,17 +93,445 @@ gtag('config', 'G-S5WCYTCSVP');
 <h1>Trust, but Verify — and Ship</h1>
 <p class="lede">Permissions, privacy, failure recovery, and the capstone.</p>
 <p class="epstatus">This lesson drops soon — <a href="https://www.youtube.com/@ClingyBearTeaches">subscribe on YouTube</a> so you don't miss it.</p>
-<h2>In this lesson</h2>
-<p>The capstone. Review the trust stack — scope, source, permission, preview, approval, verification, rollback — learn the &#x27;show me&#x27; habit for everything the assistant claims, build a preflight for private data and a protocol for failure, and finish with a human approval gate and a visible verification pass.</p>
-<h2>Key beats</h2>
+<section class="media" aria-label="Episode media"><h2>Watch &amp; listen</h2><div class="media-grid"><figure class="media-slot placeholder" aria-label="Episode video coming soon"><div class="media-empty"><span class="emoji" aria-hidden="true">🎬</span><p><strong>Episode video — coming soon</strong></p><p class="hint">Drop in your episode file and it plays here.</p></div></figure><figure class="media-slot placeholder" aria-label="Episode voiceover coming soon"><div class="media-empty"><span class="emoji" aria-hidden="true">🎙️</span><p><strong>Voiceover — coming soon</strong></p><p class="hint">Drop in your voiceover file and it plays here.</p></div></figure></div></section>
+<p class="article-intro">The capstone. Everything in Season 1 converges here: the trust stack — scope, source, permission, preview, approval, verification, rollback — the “show me” habit, a preflight for private data, a protocol for failure, and a cross-project bug reel of real mistakes. It ends with a shipped capstone behind a human approval gate and a visible verification pass. Trust the system; verify the output; ship the thing.</p>
+<h2>The problem this lesson solves</h2>
+<p>T</p>
+<p>h</p>
+<p>e</p>
+<p> </p>
+<p>b</p>
+<p>e</p>
+<p>t</p>
+<p>t</p>
+<p>e</p>
+<p>r</p>
+<p> </p>
+<p>t</p>
+<p>h</p>
+<p>e</p>
+<p> </p>
+<p>a</p>
+<p>s</p>
+<p>s</p>
+<p>i</p>
+<p>s</p>
+<p>t</p>
+<p>a</p>
+<p>n</p>
+<p>t</p>
+<p> </p>
+<p>g</p>
+<p>e</p>
+<p>t</p>
+<p>s</p>
+<p>,</p>
+<p> </p>
+<p>t</p>
+<p>h</p>
+<p>e</p>
+<p> </p>
+<p>e</p>
+<p>a</p>
+<p>s</p>
+<p>i</p>
+<p>e</p>
+<p>r</p>
+<p> </p>
+<p>i</p>
+<p>t</p>
+<p> </p>
+<p>i</p>
+<p>s</p>
+<p> </p>
+<p>t</p>
+<p>o</p>
+<p> </p>
+<p>s</p>
+<p>t</p>
+<p>o</p>
+<p>p</p>
+<p> </p>
+<p>c</p>
+<p>h</p>
+<p>e</p>
+<p>c</p>
+<p>k</p>
+<p>i</p>
+<p>n</p>
+<p>g</p>
+<p> </p>
+<p>—</p>
+<p> </p>
+<p>a</p>
+<p>n</p>
+<p>d</p>
+<p> </p>
+<p>t</p>
+<p>h</p>
+<p>a</p>
+<p>t</p>
+<p>’</p>
+<p>s</p>
+<p> </p>
+<p>w</p>
+<p>h</p>
+<p>e</p>
+<p>n</p>
+<p> </p>
+<p>t</p>
+<p>h</p>
+<p>e</p>
+<p> </p>
+<p>e</p>
+<p>x</p>
+<p>p</p>
+<p>e</p>
+<p>n</p>
+<p>s</p>
+<p>i</p>
+<p>v</p>
+<p>e</p>
+<p> </p>
+<p>m</p>
+<p>i</p>
+<p>s</p>
+<p>t</p>
+<p>a</p>
+<p>k</p>
+<p>e</p>
+<p>s</p>
+<p> </p>
+<p>h</p>
+<p>a</p>
+<p>p</p>
+<p>p</p>
+<p>e</p>
+<p>n</p>
+<p>.</p>
+<p> </p>
+<p>A</p>
+<p>n</p>
+<p> </p>
+<p>u</p>
+<p>n</p>
+<p>v</p>
+<p>e</p>
+<p>r</p>
+<p>i</p>
+<p>f</p>
+<p>i</p>
+<p>e</p>
+<p>d</p>
+<p> </p>
+<p>c</p>
+<p>l</p>
+<p>a</p>
+<p>i</p>
+<p>m</p>
+<p> </p>
+<p>s</p>
+<p>h</p>
+<p>i</p>
+<p>p</p>
+<p>s</p>
+<p> </p>
+<p>t</p>
+<p>o</p>
+<p> </p>
+<p>t</p>
+<p>h</p>
+<p>e</p>
+<p> </p>
+<p>p</p>
+<p>u</p>
+<p>b</p>
+<p>l</p>
+<p>i</p>
+<p>c</p>
+<p>.</p>
+<p> </p>
+<p>A</p>
+<p> </p>
+<p>p</p>
+<p>r</p>
+<p>i</p>
+<p>v</p>
+<p>a</p>
+<p>t</p>
+<p>e</p>
+<p>-</p>
+<p>d</p>
+<p>a</p>
+<p>t</p>
+<p>a</p>
+<p> </p>
+<p>d</p>
+<p>e</p>
+<p>m</p>
+<p>o</p>
+<p> </p>
+<p>l</p>
+<p>e</p>
+<p>a</p>
+<p>k</p>
+<p>s</p>
+<p> </p>
+<p>a</p>
+<p> </p>
+<p>r</p>
+<p>e</p>
+<p>a</p>
+<p>l</p>
+<p> </p>
+<p>n</p>
+<p>a</p>
+<p>m</p>
+<p>e</p>
+<p>.</p>
+<p> </p>
+<p>A</p>
+<p> </p>
+<p>f</p>
+<p>a</p>
+<p>i</p>
+<p>l</p>
+<p>e</p>
+<p>d</p>
+<p> </p>
+<p>s</p>
+<p>t</p>
+<p>e</p>
+<p>p</p>
+<p> </p>
+<p>g</p>
+<p>e</p>
+<p>t</p>
+<p>s</p>
+<p> </p>
+<p>p</p>
+<p>a</p>
+<p>p</p>
+<p>e</p>
+<p>r</p>
+<p>e</p>
+<p>d</p>
+<p> </p>
+<p>o</p>
+<p>v</p>
+<p>e</p>
+<p>r</p>
+<p> </p>
+<p>w</p>
+<p>i</p>
+<p>t</p>
+<p>h</p>
+<p> </p>
+<p>i</p>
+<p>n</p>
+<p>v</p>
+<p>e</p>
+<p>n</p>
+<p>t</p>
+<p>e</p>
+<p>d</p>
+<p> </p>
+<p>s</p>
+<p>u</p>
+<p>c</p>
+<p>c</p>
+<p>e</p>
+<p>s</p>
+<p>s</p>
+<p>.</p>
+<p> </p>
+<p>T</p>
+<p>h</p>
+<p>e</p>
+<p> </p>
+<p>p</p>
+<p>r</p>
+<p>o</p>
+<p>b</p>
+<p>l</p>
+<p>e</p>
+<p>m</p>
+<p> </p>
+<p>t</p>
+<p>h</p>
+<p>i</p>
+<p>s</p>
+<p> </p>
+<p>l</p>
+<p>e</p>
+<p>s</p>
+<p>s</p>
+<p>o</p>
+<p>n</p>
+<p> </p>
+<p>s</p>
+<p>o</p>
+<p>l</p>
+<p>v</p>
+<p>e</p>
+<p>s</p>
+<p> </p>
+<p>i</p>
+<p>s</p>
+<p> </p>
+<p>m</p>
+<p>a</p>
+<p>k</p>
+<p>i</p>
+<p>n</p>
+<p>g</p>
+<p> </p>
+<p>t</p>
+<p>r</p>
+<p>u</p>
+<p>s</p>
+<p>t</p>
+<p> </p>
+<p>s</p>
+<p>t</p>
+<p>r</p>
+<p>u</p>
+<p>c</p>
+<p>t</p>
+<p>u</p>
+<p>r</p>
+<p>a</p>
+<p>l</p>
+<p>:</p>
+<p> </p>
+<p>p</p>
+<p>e</p>
+<p>r</p>
+<p>m</p>
+<p>i</p>
+<p>s</p>
+<p>s</p>
+<p>i</p>
+<p>o</p>
+<p>n</p>
+<p>s</p>
+<p>,</p>
+<p> </p>
+<p>e</p>
+<p>v</p>
+<p>i</p>
+<p>d</p>
+<p>e</p>
+<p>n</p>
+<p>c</p>
+<p>e</p>
+<p>,</p>
+<p> </p>
+<p>a</p>
+<p>n</p>
+<p>d</p>
+<p> </p>
+<p>a</p>
+<p>p</p>
+<p>p</p>
+<p>r</p>
+<p>o</p>
+<p>v</p>
+<p>a</p>
+<p>l</p>
+<p> </p>
+<p>g</p>
+<p>a</p>
+<p>t</p>
+<p>e</p>
+<p>s</p>
+<p> </p>
+<p>b</p>
+<p>u</p>
+<p>i</p>
+<p>l</p>
+<p>t</p>
+<p> </p>
+<p>i</p>
+<p>n</p>
+<p>t</p>
+<p>o</p>
+<p> </p>
+<p>t</p>
+<p>h</p>
+<p>e</p>
+<p> </p>
+<p>w</p>
+<p>o</p>
+<p>r</p>
+<p>k</p>
+<p>f</p>
+<p>l</p>
+<p>o</p>
+<p>w</p>
+<p> </p>
+<p>s</p>
+<p>o</p>
+<p> </p>
+<p>s</p>
+<p>a</p>
+<p>f</p>
+<p>e</p>
+<p>t</p>
+<p>y</p>
+<p> </p>
+<p>d</p>
+<p>o</p>
+<p>e</p>
+<p>s</p>
+<p>n</p>
+<p>’</p>
+<p>t</p>
+<p> </p>
+<p>d</p>
+<p>e</p>
+<p>p</p>
+<p>e</p>
+<p>n</p>
+<p>d</p>
+<p> </p>
+<p>o</p>
+<p>n</p>
+<p> </p>
+<p>v</p>
+<p>i</p>
+<p>g</p>
+<p>i</p>
+<p>l</p>
+<p>a</p>
+<p>n</p>
+<p>c</p>
+<p>e</p>
+<p>.</p>
+<h2>The lesson, step by step</h2>
+<h3>Review the trust stack</h3>
+<p>Scope, source, permission, preview, approval, verification, rollback — seven layers, in order. Every consequential action passes through all of them. The stack is the season’s thesis in one diagram: BRAVE was the method; this is the safety architecture underneath it.</p>
+<h3>Separate reversible from consequential</h3>
+<p>Researching, drafting, and building locally are reversible. Sending, publishing, purchasing, and deleting are not. The line between them is where permission lives — and crossing it without approval is the one unforgivable failure mode.</p>
+<h3>Build the “show me” habit</h3>
+<p>For everything the assistant claims: show me the source excerpt, the data count, the diff, the test result, the rendered page, the live URL. The habit is cheap and it catches nearly everything.</p>
+<h3>Run a preflight for private data</h3>
+<p>Minimize, redact, anonymize — and never use another person’s information in public demonstrations. Episode 4’s privacy recipe becomes a standing preflight: check before the work starts, not after it ships.</p>
+<h3>Follow the failure protocol</h3>
+<p>Stop. State what failed. Preserve completed work. Explain the consequence. Do not invent success. The protocol turns failures into recoverable incidents instead of hidden rot — and it’s what makes the next step trustworthy.</p>
+<h3>Study the bug reel</h3>
+<p>Real mistakes from real projects: an SMS direction mixup that flipped a whole analysis, a BLM terminology slip, stale travel data presented as fresh, a broken render shipped unreviewed, records lost to a replace-style update, a deployment with the wrong protection settings. Each one maps to a stack layer that would have caught it.</p>
+<h3>Ship the capstone — behind a human gate</h3>
+<p>The season ends with a real ship: a human approval gate, then a visible verification pass — the completion report on screen (Completed, Evidence, Changed, Not completed, Decision needed, Next action). The audience watches the whole trust stack fire in sequence, one last time.</p>
+<h2>Worked example</h2>
+<p>The capstone ship, narrated live: the work is previewed (scope ✓, source ✓, permission ✓, preview ✓), Chris approves at the gate (approval ✓), the verification pass runs on screen — source links opened, counts reconciled, the live URL loaded and clicked through (verification ✓) — and the rollback path is stated before anyone celebrates (rollback ✓). Seven layers, ten minutes, zero drama. That’s what “shipped” looks like when trust is structural.</p>
+<h2>Your takeaway</h2>
 <ul class="beats">
-<li>The trust stack: scope, source, permission, preview, approval, verification, rollback</li>
-<li>Reversible vs. consequential: researching and drafting are not sending, publishing, purchasing, or deleting</li>
-<li>The &#x27;show me&#x27; habit: source excerpt, data count, diff, test result, rendered page, or live URL</li>
-<li>Preflight for private data: minimize, redact, anonymize — never use another person&#x27;s information in public demos</li>
-<li>Failure protocol: stop, state what failed, preserve completed work, explain the consequence, do not invent success</li>
-<li>A cross-project bug reel: direction mixups, terminology slips, stale travel data, broken renders, lost records</li>
-<li>Capstone: ship with a human approval gate and a visible verification pass</li>
+<li>Run the trust stack on consequential work: scope, source, permission, preview, approval, verification, rollback.</li>
+<li>Reversible and consequential are different universes — permission lives on the border.</li>
+<li>“Show me” everything: excerpts, counts, diffs, tests, rendered pages, live URLs.</li>
+<li>Preflight private data every time; follow the failure protocol when things break.</li>
+<li>Ship behind a human approval gate, and make the verification pass visible.</li>
 </ul>
 <h2>The BRAVE lens</h2>
 <p>Every episode runs through the <a href="/brave/">BRAVE method</a>: brief the outcome, reveal relevant context, authorize the next action, verify the evidence, and evolve the system.</p>
