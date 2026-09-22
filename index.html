@@ -4,11 +4,24 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Clingy Bear Teaches — Real projects. Better AI. No prompt theater.</title>
-<meta name="description" content="Learn to get the most out of your AI assistant. Real workflows. Zero fluff. Clingy Bear Teaches is Chris Pick's practical class in turning an AI assistant into a capable collaborator.">
-<meta property="og:title" content="Clingy Bear Teaches">
+<meta name="description" content="Learn to get the most out of your AI assistant. Real workflows. Zero fluff. Clingy Bear Teaches is software engineer Chris Pick&#x27;s practical class in turning an AI assistant into a capable collaborator.">
+<meta name="keywords" content="Clingy Bear Teaches, AI assistant course, learn AI, BRAVE method, AI workflows, Chris Pick">
+<link rel="canonical" href="https://teaches.clingybear.com/">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Clingy Bear Teaches">
+<meta property="og:title" content="Clingy Bear Teaches — Real projects. Better AI. No prompt theater.">
 <meta property="og:description" content="Learn to get the most out of your AI assistant 🐨 Real workflows. Zero fluff. Lessons dropping soon.">
-<meta property="og:image" content="assets/koala.png">
-<link rel="icon" type="image/png" href="assets/koala.png">
+<meta property="og:url" content="https://teaches.clingybear.com/">
+<meta property="og:image" content="https://teaches.clingybear.com/assets/koala.png">
+<meta property="og:image:alt" content="Clingy Bear, the pink koala mascot of Clingy Bear Teaches">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Clingy Bear Teaches — Real projects. Better AI. No prompt theater.">
+<meta name="twitter:description" content="Learn to get the most out of your AI assistant 🐨 Real workflows. Zero fluff. Lessons dropping soon.">
+<meta name="twitter:image" content="https://teaches.clingybear.com/assets/koala.png">
+<link rel="icon" type="image/png" href="/assets/koala.png">
+<link rel="apple-touch-icon" href="/assets/koala.png">
+<link rel="stylesheet" href="/assets/site.css">
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-S5WCYTCSVP"></script>
 <script>
@@ -17,111 +30,119 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-S5WCYTCSVP');
 </script>
-<style>
-:root{
-  --pink:#ff5fa2; --pink-deep:#e84393; --pink-soft:#ffe4ef; --ink:#2b2330;
-  --bg:#fff7fa; --card:#ffffff; --muted:#7a6b76;
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "name": "Clingy Bear Teaches",
+      "url": "https://teaches.clingybear.com/",
+      "description": "Learn to get the most out of your AI assistant \ud83d\udc28 Real workflows. Zero fluff. Lessons dropping soon.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Clingy Bear Teaches",
+        "url": "https://teaches.clingybear.com/",
+        "logo": "https://teaches.clingybear.com/assets/koala.png",
+        "sameAs": [
+          "https://www.youtube.com/@ClingyBearTeaches",
+          "https://www.instagram.com/clingybearteaches/",
+          "https://www.threads.com/@clingybearteaches",
+          "https://www.tiktok.com/@clingybearteaches"
+        ]
+      }
+    },
+    {
+      "@type": "Organization",
+      "name": "Clingy Bear Teaches",
+      "url": "https://teaches.clingybear.com/",
+      "logo": "https://teaches.clingybear.com/assets/koala.png",
+      "sameAs": [
+        "https://www.youtube.com/@ClingyBearTeaches",
+        "https://www.instagram.com/clingybearteaches/",
+        "https://www.threads.com/@clingybearteaches",
+        "https://www.tiktok.com/@clingybearteaches"
+      ]
+    }
+  ]
 }
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:ui-rounded,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6}
-.wrap{max-width:1060px;margin:0 auto;padding:0 24px}
-.hero{padding:72px 0 56px;text-align:center}
-.koala{width:180px;height:180px;border-radius:50%;object-fit:cover;border:6px solid #fff;box-shadow:0 12px 40px rgba(232,67,147,.35);margin-bottom:24px}
-.kicker{letter-spacing:.25em;text-transform:uppercase;font-size:.78rem;color:var(--pink-deep);font-weight:700;margin-bottom:12px}
-h1{font-size:clamp(2.4rem,6vw,3.8rem);line-height:1.08;letter-spacing:-.02em;margin-bottom:16px}
-.tagline{font-size:1.25rem;color:var(--muted);max-width:640px;margin:0 auto 12px}
-.bio{font-size:1.05rem;max-width:620px;margin:0 auto 28px}
-.cta{display:inline-block;background:var(--pink-deep);color:#fff;font-weight:700;font-size:1.1rem;text-decoration:none;padding:14px 34px;border-radius:999px;box-shadow:0 8px 24px rgba(232,67,147,.4);transition:transform .15s ease}
-.cta:hover{transform:translateY(-2px)}
-section{padding:56px 0}
-h2{font-size:clamp(1.6rem,4vw,2.2rem);letter-spacing:-.01em;margin-bottom:8px;text-align:center}
-.sub{text-align:center;color:var(--muted);max-width:680px;margin:0 auto 36px}
-.grid{display:grid;gap:18px}
-.brave{grid-template-columns:repeat(auto-fit,minmax(180px,1fr))}
-.card{background:var(--card);border-radius:18px;padding:24px;box-shadow:0 4px 18px rgba(43,35,48,.07);border:1px solid #f6d9e7}
-.card h3{margin-bottom:8px;font-size:1.15rem}
-.brave .card{position:relative;padding-top:30px}
-.brave .letter{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:50%;background:var(--pink-soft);color:var(--pink-deep);font-weight:800;font-size:1.4rem;margin-bottom:12px}
-.card p{color:var(--muted);font-size:.98rem}
-.spotlight{background:linear-gradient(135deg,#ffd9e9,#ffeef5);border-radius:24px;padding:44px 36px;text-align:center;border:1px solid #f9c6dd}
-.spotlight .ep{font-weight:700;color:var(--pink-deep);letter-spacing:.18em;text-transform:uppercase;font-size:.8rem;margin-bottom:10px}
-.spotlight h3{font-size:clamp(1.7rem,4vw,2.4rem);margin-bottom:12px}
-.spotlight p{max-width:640px;margin:0 auto 24px;color:#5c4f58}
-.eps{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
-.eps .card .n{font-weight:800;color:var(--pink-deep);font-size:.85rem;letter-spacing:.12em;margin-bottom:6px}
-.socials{display:flex;flex-wrap:wrap;gap:14px;justify-content:center}
-.socials a{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid #f6d9e7;padding:12px 22px;border-radius:999px;text-decoration:none;color:var(--ink);font-weight:600;box-shadow:0 3px 12px rgba(43,35,48,.06)}
-.socials a:hover{border-color:var(--pink);color:var(--pink-deep)}
-footer{text-align:center;color:var(--muted);font-size:.9rem;padding:36px 0 48px}
-footer a{color:var(--pink-deep)}
-</style>
+</script>
 </head>
 <body>
+<nav class="topnav" aria-label="Primary">
+<a class="brand" href="/"><img src="/assets/koala.png" alt="Clingy Bear logo" width="36" height="36"><span>Clingy Bear Teaches</span></a>
+<div class="links">
+<a href="/">Home</a>
+<a href="/brave/">BRAVE</a>
+<a href="/season-1/">Season 1</a>
+<a class="yt" href="https://www.youtube.com/@ClingyBearTeaches">▶ YouTube</a>
+</div>
+</nav>
+<main class="wrap">
 
-<header class="hero wrap">
-  <img class="koala" src="assets/koala.png" alt="Clingy Bear, the pink koala mascot">
-  <div class="kicker">A YouTube class by Chris Pick</div>
-  <h1>Clingy Bear Teaches</h1>
-  <p class="tagline">Real projects. Better AI. No prompt theater.</p>
-  <p class="bio">Learn to get the most out of your AI assistant 🐨 Real workflows. Zero fluff. Lessons dropping soon.</p>
-  <a class="cta" href="https://www.youtube.com/@ClingyBearTeaches">▶ Watch on YouTube</a>
+<header class="hero">
+<img class="koala" src="/assets/koala.png" alt="Clingy Bear, the pink koala mascot of Clingy Bear Teaches" width="360" height="360">
+<p class="kicker">A YouTube class by Chris Pick</p>
+<h1>Clingy Bear Teaches</h1>
+<p class="tagline">Real projects. Better AI. No prompt theater.</p>
+<p class="bio">Learn to get the most out of your AI assistant 🐨 Real workflows. Zero fluff. Lessons dropping soon.</p>
+<a class="cta" href="https://www.youtube.com/@ClingyBearTeaches">▶ Watch on YouTube</a>
 </header>
 
-<section class="wrap">
-  <h2>What is BRAVE?</h2>
-  <p class="sub">BRAVE is the signature method behind every lesson — five habits that turn an AI assistant from a chat window into a capable collaborator.</p>
-  <div class="grid brave">
-    <div class="card"><span class="letter">B</span><h3>Brief the outcome</h3><p>Say what finished looks like, who it is for, and the format you need.</p></div>
-    <div class="card"><span class="letter">R</span><h3>Reveal relevant context</h3><p>Supply the facts, constraints, prior decisions, examples, and source material that change the answer.</p></div>
-    <div class="card"><span class="letter">A</span><h3>Authorize the next action</h3><p>Distinguish research from sending, drafting from publishing, and reversible work from consequential work.</p></div>
-    <div class="card"><span class="letter">V</span><h3>Verify the evidence</h3><p>Ask for source links, read primary records, inspect rendered files, test deployments, and reconcile counts.</p></div>
-    <div class="card"><span class="letter">E</span><h3>Evolve the system</h3><p>Preserve useful decisions, templates, and lessons so the next run starts smarter.</p></div>
-  </div>
+<section>
+<h2>What is BRAVE?</h2>
+<p class="sub">BRAVE is the signature method behind every lesson — five habits that turn an AI assistant from a chat window into a capable collaborator. <a href="/brave/">Read the full breakdown →</a></p>
+<div class="grid brave">
+<div class="card"><span class="letter" aria-hidden="true">B</span><h3>Brief the outcome</h3><p>Say what finished looks like, who it is for, and the format you need.</p></div>
+<div class="card"><span class="letter" aria-hidden="true">R</span><h3>Reveal relevant context</h3><p>Supply the facts, constraints, prior decisions, examples, and source material that change the answer.</p></div>
+<div class="card"><span class="letter" aria-hidden="true">A</span><h3>Authorize the next action</h3><p>Distinguish research from sending, drafting from publishing, and reversible work from consequential work.</p></div>
+<div class="card"><span class="letter" aria-hidden="true">V</span><h3>Verify the evidence</h3><p>Ask for source links, read primary records, inspect rendered files, test deployments, and reconcile counts.</p></div>
+<div class="card"><span class="letter" aria-hidden="true">E</span><h3>Evolve the system</h3><p>Preserve useful decisions, templates, and lessons so the next run starts smarter.</p></div>
+</div>
 </section>
 
-<section class="wrap">
-  <div class="spotlight">
-    <div class="ep">Episode 1</div>
-    <h3>Stop chatting. Start collaborating.</h3>
-    <p>The channel's promise in one lesson: the BRAVE method shown through seven real projects — mining-claim research, text-message patterns, airline points, vineyard media production, music albums, shipped apps, and business operations. Software engineer Chris Pick shows how a vague request becomes a brief, how an agent researches and builds, and the two questions to always answer: <em>what does done look like, and what evidence would make you trust it?</em></p>
-    <a class="cta" href="https://www.youtube.com/@ClingyBearTeaches">Watch the series</a>
-  </div>
+<section>
+<div class="spotlight">
+<div class="ep">Episode 1</div>
+<h3>Stop Chatting. Start Collaborating.</h3>
+<p>The channel's promise in one lesson: the BRAVE method shown through seven real projects — mining-claim research, text-message patterns, airline points, vineyard media production, music albums, shipped apps, and business operations. Software engineer Chris Pick shows how a vague request becomes a brief, how an agent researches and builds, and the two questions to always answer: <em>what does done look like, and what evidence would make you trust it?</em></p>
+<p><a class="cta" href="/season-1/ep-1-stop-chatting-start-collaborating/">Episode 1 guide →</a></p>
+</div>
 </section>
 
-<section class="wrap">
-  <h2>Season 1 — 12 lessons</h2>
-  <p class="sub">Every episode is anchored in work Chris has actually done with Clingy Bear — a practical capability ladder from first brief to capstone ship.</p>
-  <div class="grid eps">
-    <div class="card"><div class="n">EPISODE 1</div><h3>Stop chatting. Start collaborating.</h3><p>The BRAVE method through seven real projects.</p></div>
-    <div class="card"><div class="n">EPISODE 2</div><h3>Give your AI the map</h3><p>Context and continuity through the mining-claim story.</p></div>
-    <div class="card"><div class="n">EPISODE 3</div><h3>Receipts or it didn't happen</h3><p>Evidence-first BLM, land, and genealogy research.</p></div>
-    <div class="card"><div class="n">EPISODE 4</div><h3>What the texts actually say</h3><p>Privacy-safe SMS sentiment analysis over time.</p></div>
-    <div class="card"><div class="n">EPISODE 5</div><h3>Make the miles work harder</h3><p>Travel constraints, points, routes, and verification.</p></div>
-    <div class="card"><div class="n">EPISODE 6</div><h3>Turn a footage pile into a production system</h3><p>The AI Vineyard media workflow.</p></div>
-    <div class="card"><div class="n">EPISODE 7</div><h3>From song idea to six-album slate</h3><p>Creative direction, generation, selection, and release.</p></div>
-    <div class="card"><div class="n">EPISODE 8</div><h3>Build the tool you wish existed</h3><p>Ground School Trainer and NeuroSpicy.</p></div>
-    <div class="card"><div class="n">EPISODE 9</div><h3>Ship a real data product</h3><p>VMenu's research, imports, audits, and deployment.</p></div>
-    <div class="card"><div class="n">EPISODE 10</div><h3>Give the business its own brain</h3><p>24 Legs, maximusPoints, and operations.</p></div>
-    <div class="card"><div class="n">EPISODE 11</div><h3>Run several projects without losing the plot</h3><p>Delegation, durable memory, and background work.</p></div>
-    <div class="card"><div class="n">EPISODE 12</div><h3>Trust, but verify — and ship</h3><p>Permissions, privacy, failure recovery, and the capstone.</p></div>
-  </div>
+<section>
+<h2>Season 1 — 12 lessons</h2>
+<p class="sub">Every episode is anchored in work Chris has actually done with Clingy Bear — a practical capability ladder from first brief to capstone ship. <a href="/season-1/">Browse all episodes →</a></p>
+<div class="grid eps">
+<article class="card"><div class="n">EPISODE 1</div><h3><a href="/season-1/ep-1-stop-chatting-start-collaborating/">Stop Chatting. Start Collaborating.</a></h3><p>The BRAVE method through seven real projects.</p></article>
+<article class="card"><div class="n">EPISODE 2</div><h3><a href="/season-1/ep-2-give-your-ai-the-map/">Give Your AI the Map</a></h3><p>Context and continuity through the mining-claim story.</p></article>
+<article class="card"><div class="n">EPISODE 3</div><h3><a href="/season-1/ep-3-receipts-or-it-didnt-happen/">Receipts or It Didn&#x27;t Happen</a></h3><p>Evidence-first BLM, land, and genealogy research.</p></article>
+<article class="card"><div class="n">EPISODE 4</div><h3><a href="/season-1/ep-4-what-the-texts-actually-say/">What the Texts Actually Say</a></h3><p>Privacy-safe SMS sentiment analysis over time.</p></article>
+<article class="card"><div class="n">EPISODE 5</div><h3><a href="/season-1/ep-5-make-the-miles-work-harder/">Make the Miles Work Harder</a></h3><p>Travel constraints, points, routes, and verification.</p></article>
+<article class="card"><div class="n">EPISODE 6</div><h3><a href="/season-1/ep-6-turn-a-footage-pile-into-a-production-system/">Turn a Footage Pile into a Production System</a></h3><p>The AI Vineyard media workflow.</p></article>
+<article class="card"><div class="n">EPISODE 7</div><h3><a href="/season-1/ep-7-from-song-idea-to-six-album-slate/">From Song Idea to Six-Album Slate</a></h3><p>Creative direction, generation, selection, and release.</p></article>
+<article class="card"><div class="n">EPISODE 8</div><h3><a href="/season-1/ep-8-build-the-tool-you-wish-existed/">Build the Tool You Wish Existed</a></h3><p>Ground School Trainer and NeuroSpicy.</p></article>
+<article class="card"><div class="n">EPISODE 9</div><h3><a href="/season-1/ep-9-ship-a-real-data-product/">Ship a Real Data Product</a></h3><p>VMenu&#x27;s research, imports, audits, and deployment.</p></article>
+<article class="card"><div class="n">EPISODE 10</div><h3><a href="/season-1/ep-10-give-the-business-its-own-brain/">Give the Business Its Own Brain</a></h3><p>24 Legs, maximusPoints, and operations.</p></article>
+<article class="card"><div class="n">EPISODE 11</div><h3><a href="/season-1/ep-11-run-several-projects-without-losing-the-plot/">Run Several Projects Without Losing the Plot</a></h3><p>Delegation, durable memory, and background work.</p></article>
+<article class="card"><div class="n">EPISODE 12</div><h3><a href="/season-1/ep-12-trust-but-verify-and-ship/">Trust, but Verify — and Ship</a></h3><p>Permissions, privacy, failure recovery, and the capstone.</p></article>
+</div>
 </section>
 
-<section class="wrap">
-  <h2>Follow along</h2>
-  <p class="sub">Lessons land on YouTube first, with clips and updates across the other channels.</p>
-  <div class="socials">
-    <a href="https://www.youtube.com/@ClingyBearTeaches">📺 YouTube</a>
-    <a href="https://www.instagram.com/clingybearteaches/">📸 Instagram</a>
-    <a href="https://www.threads.com/@clingybearteaches/">🧵 Threads</a>
-    <a href="https://www.tiktok.com/@clingybearteaches">🎵 TikTok</a>
-  </div>
+<section>
+<h2>Follow along</h2>
+<p class="sub">Lessons land on YouTube first, with clips and updates across the other channels.</p>
 </section>
-
+</main>
 <footer>
-  <p>Clingy Bear Teaches · <a href="https://www.youtube.com/@ClingyBearTeaches">youtube.com/@ClingyBearTeaches</a></p>
-  <p>A Clingy Bear Production</p>
+<nav class="socials" aria-label="Social links">
+<a href="https://www.youtube.com/@ClingyBearTeaches">📺 YouTube</a>
+<a href="https://www.instagram.com/clingybearteaches/">📸 Instagram</a>
+<a href="https://www.threads.com/@clingybearteaches">🧵 Threads</a>
+<a href="https://www.tiktok.com/@clingybearteaches">🎵 TikTok</a>
+</nav>
+<p>Clingy Bear Teaches · <a href="https://www.youtube.com/@ClingyBearTeaches">youtube.com/@ClingyBearTeaches</a></p>
+<p>A Clingy Bear Production</p>
 </footer>
-
 </body>
 </html>

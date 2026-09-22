@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Episode 9: Ship a Real Data Product | Clingy Bear Teaches</title>
+<meta name="description" content="VMenu&#x27;s research, imports, audits, and deployment. The unglamorous engine behind real data products, through VMenu. Define the data contract before…">
+<meta name="keywords" content="Clingy Bear Teaches, AI assistant course, BRAVE method, AI workflows, Chris Pick, episode 9">
+<link rel="canonical" href="https://teaches.clingybear.com/season-1/ep-9-ship-a-real-data-product/">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Clingy Bear Teaches">
+<meta property="og:title" content="Episode 9: Ship a Real Data Product — Clingy Bear Teaches">
+<meta property="og:description" content="VMenu&#x27;s research, imports, audits, and deployment.">
+<meta property="og:url" content="https://teaches.clingybear.com/season-1/ep-9-ship-a-real-data-product/">
+<meta property="og:image" content="https://teaches.clingybear.com/assets/koala.png">
+<meta property="og:image:alt" content="Clingy Bear, the pink koala mascot of Clingy Bear Teaches">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Episode 9: Ship a Real Data Product — Clingy Bear Teaches">
+<meta name="twitter:description" content="VMenu&#x27;s research, imports, audits, and deployment.">
+<meta name="twitter:image" content="https://teaches.clingybear.com/assets/koala.png">
+<link rel="icon" type="image/png" href="/assets/koala.png">
+<link rel="apple-touch-icon" href="/assets/koala.png">
+<link rel="stylesheet" href="/assets/site.css">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-S5WCYTCSVP"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-S5WCYTCSVP');
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Episode",
+      "name": "Ship a Real Data Product",
+      "episodeNumber": 9,
+      "description": "The unglamorous engine behind real data products, through VMenu. Define the data contract before collecting anything, separate collection from normalization from deduplication from import from audit, and verify everything from the user's side.",
+      "url": "https://teaches.clingybear.com/season-1/ep-9-ship-a-real-data-product/",
+      "author": {
+        "@type": "Person",
+        "name": "Chris Pick"
+      },
+      "partOfSeries": {
+        "@type": "VideoSeries",
+        "name": "Clingy Bear Teaches \u2014 Season 1",
+        "url": "https://teaches.clingybear.com/season-1/"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://teaches.clingybear.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Season 1",
+          "item": "https://teaches.clingybear.com/season-1/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Ship a Real Data Product"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<nav class="topnav" aria-label="Primary">
+<a class="brand" href="/"><img src="/assets/koala.png" alt="Clingy Bear logo" width="36" height="36"><span>Clingy Bear Teaches</span></a>
+<div class="links">
+<a href="/">Home</a>
+<a href="/brave/">BRAVE</a>
+<a href="/season-1/">Season 1</a>
+<a class="yt" href="https://www.youtube.com/@ClingyBearTeaches">▶ YouTube</a>
+</div>
+</nav>
+<main class="wrap">
+
+<nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/season-1/">Season 1</a></li><li aria-current="page">Episode 9</li></ol></nav>
+<p class="epkicker">Season 1 · Episode 9</p>
+<h1>Ship a Real Data Product</h1>
+<p class="lede">VMenu&#x27;s research, imports, audits, and deployment.</p>
+<p class="epstatus">This lesson drops soon — <a href="https://www.youtube.com/@ClingyBearTeaches">subscribe on YouTube</a> so you don't miss it.</p>
+<h2>In this lesson</h2>
+<p>The unglamorous engine behind real data products, through VMenu. Define the data contract before collecting anything, separate collection from normalization from deduplication from import from audit, and verify everything from the user&#x27;s side.</p>
+<h2>Key beats</h2>
+<ul class="beats">
+<li>Define the data contract before collecting data: identity, address, sections, items, prices, sources, update status, timestamps</li>
+<li>Separate collection, normalization, deduplication, import, and audit into distinct stages</li>
+<li>Idempotency: rerunning the same batch should reconcile, not duplicate or erase fields</li>
+<li>Why partial updates are dangerous when an endpoint replaces a full record</li>
+<li>Build quality reports: missing data, suspiciously thin records, duplicates, closed businesses</li>
+<li>Treat timeouts as unknown outcomes — reconcile counts before retrying</li>
+<li>Deploy with correct authorship, environment variables, and production checks</li>
+<li>Verify from the user&#x27;s side: search, inspect, test mobile, confirm analytics</li>
+</ul>
+<h2>The BRAVE lens</h2>
+<p>Every episode runs through the <a href="/brave/">BRAVE method</a>: brief the outcome, reveal relevant context, authorize the next action, verify the evidence, and evolve the system.</p>
+<section class="cta-box">
+<h2>Watch it first on YouTube</h2>
+<p><a class="cta" href="https://www.youtube.com/@ClingyBearTeaches">▶ Clingy Bear Teaches on YouTube</a></p>
+</section>
+<nav class="epnav" aria-label="Episode navigation"><a class="prev" href="/season-1/ep-8-build-the-tool-you-wish-existed/">← Episode 8: Build the Tool You Wish Existed</a> <a class="next" href="/season-1/ep-10-give-the-business-its-own-brain/">Episode 10: Give the Business Its Own Brain →</a></nav>
+</main>
+<footer>
+<nav class="socials" aria-label="Social links">
+<a href="https://www.youtube.com/@ClingyBearTeaches">📺 YouTube</a>
+<a href="https://www.instagram.com/clingybearteaches/">📸 Instagram</a>
+<a href="https://www.threads.com/@clingybearteaches">🧵 Threads</a>
+<a href="https://www.tiktok.com/@clingybearteaches">🎵 TikTok</a>
+</nav>
+<p>Clingy Bear Teaches · <a href="https://www.youtube.com/@ClingyBearTeaches">youtube.com/@ClingyBearTeaches</a></p>
+<p>A Clingy Bear Production</p>
+</footer>
+</body>
+</html>
