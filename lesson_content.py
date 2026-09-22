@@ -1,4 +1,4 @@
-"""Full written lesson content for Clingy Bear Teaches Season 1 episode pages.
+"""Full written lesson content for Clingy Bear & Nugget Teach Muse Season 1 episode pages.
 
 Everything here is distilled from the channel playbook
 (~/workspace/your_files/clingy-bear-teaches-playbook/) — real lesson outlines,

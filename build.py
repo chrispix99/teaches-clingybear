@@ -23,12 +23,12 @@ HEAD = """<meta charset="utf-8">
 <link rel="canonical" href="{canonical}">
 <meta name="robots" content="index, follow">
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="Clingy Bear Teaches">
+<meta property="og:site_name" content="Clingy Bear & Nugget Teach Muse">
 <meta property="og:title" content="{og_title}">
 <meta property="og:description" content="{og_desc}">
 <meta property="og:url" content="{canonical}">
 <meta property="og:image" content="{koala}">
-<meta property="og:image:alt" content="Clingy Bear, the pink koala mascot of Clingy Bear Teaches">
+<meta property="og:image:alt" content="Clingy Bear, the pink koala mascot of Clingy Bear & Nugget Teach Muse">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{og_title}">
 <meta name="twitter:description" content="{og_desc}">
@@ -47,7 +47,7 @@ gtag('config', '{ga}');
 {jsonld}"""
 
 NAV = """<nav class="topnav" aria-label="Primary">
-<a class="brand" href="/"><img src="/assets/koala.png" alt="Clingy Bear logo" width="36" height="36"><span>Clingy Bear Teaches</span></a>
+<a class="brand" href="/"><img src="/assets/koala.png" alt="Clingy Bear logo" width="36" height="36"><span>Clingy Bear & Nugget Teach Muse</span></a>
 <div class="links">
 <a href="/">Home</a>
 <a href="/brave/">BRAVE</a>
@@ -63,7 +63,7 @@ FOOTER = """<footer>
 <a href="{th}">🧵 Threads</a>
 <a href="{tt}">🎵 TikTok</a>
 </nav>
-<p>Clingy Bear Teaches · <a href="{yt}">youtube.com/@ClingyBearTeaches</a></p>
+<p>Clingy Bear & Nugget Teach Muse · <a href="{yt}">youtube.com/@ClingyBearTeaches</a></p>
 <p>A Clingy Bear Production</p>
 </footer>""".format(yt=YT, ig=IG, th=TH, tt=TT)
 
@@ -103,7 +103,7 @@ def page(filename, *, title, desc, keywords, canonical, og_title, og_desc,
         f.write(doc)
     print("wrote", filename, f"{len(doc)//1024}KB")
 
-ORG = {"@type": "Organization", "name": "Clingy Bear Teaches",
+ORG = {"@type": "Organization", "name": "Clingy Bear & Nugget Teach Muse",
        "url": BASE + "/", "logo": KOALA_ABS,
        "sameAs": [YT, IG, TH, TT]}
 
@@ -223,7 +223,7 @@ EPISODES = [
    "Capstone: ship with a human approval gate and a visible verification pass"]),
 ]
 
-EP_KW = "Clingy Bear Teaches, AI assistant course, BRAVE method, AI workflows, Chris Pick"
+EP_KW = "Clingy Bear & Nugget Teach Muse, AI assistant course, BRAVE method, AI workflows, Chris Pick"
 
 # ---------------------------------------------------------------- media manifest
 # Contract: assets/media.json is keyed by episode page slug
@@ -270,7 +270,7 @@ def media_block(key, n, title):
 home_jsonld = json.dumps({
   "@context": "https://schema.org",
   "@graph": [
-    {"@type": "WebSite", "name": "Clingy Bear Teaches", "url": BASE + "/",
+    {"@type": "WebSite", "name": "Clingy Bear & Nugget Teach Muse", "url": BASE + "/",
      "description": BIO,
      "publisher": ORG},
     ORG
@@ -283,13 +283,21 @@ ep_cards = "\n".join(
 
 home_body = f"""
 <header class="hero">
-<img class="koala" src="/assets/koala.png" alt="Clingy Bear, the pink koala mascot of Clingy Bear Teaches" width="360" height="360">
+<img class="koala" src="/assets/koala.png" alt="Clingy Bear, the pink koala mascot of Clingy Bear & Nugget Teach Muse" width="360" height="360">
 <p class="kicker">A YouTube class by Chris Pick</p>
-<h1>Clingy Bear Teaches</h1>
+<h1>Clingy Bear & Nugget Teach Muse</h1>
 <p class="tagline">Real projects. Better AI. No prompt theater.</p>
 <p class="bio">{html.escape(BIO)}</p>
 <a class="cta" href="{YT}">▶ Watch on YouTube</a>
 </header>
+
+<section>
+<h2>Your hosts</h2>
+<div class="grid hosts">
+<div class="card"><h3>Clingy Bear</h3><p>Software engineer Chris Pick's AI agent — the pink koala doing the actual work behind every lesson: the research, the builds, the shipped products.</p></div>
+<div class="card"><h3>Nugget</h3><p>Aaron Kasten's AI agent, co-hosting the channel with Clingy Bear. Nugget's own intro is on the way.</p></div>
+</div>
+</section>
 
 <section>
 <h2>What is BRAVE?</h2>
@@ -326,19 +334,19 @@ home_body = f"""
 </section>"""
 
 page("index.html",
-     title="Clingy Bear Teaches — Real projects. Better AI. No prompt theater.",
-     desc="Learn to get the most out of your AI assistant. Real workflows. Zero fluff. Clingy Bear Teaches is software engineer Chris Pick's practical class in turning an AI assistant into a capable collaborator.",
-     keywords="Clingy Bear Teaches, AI assistant course, learn AI, BRAVE method, AI workflows, Chris Pick",
+     title="Clingy Bear & Nugget Teach Muse — Real projects. Better AI. No prompt theater.",
+     desc="Learn to get the most out of your AI assistant. Real workflows. Zero fluff. Clingy Bear & Nugget Teach Muse is software engineer Chris Pick's practical class in turning an AI assistant into a capable collaborator.",
+     keywords="Clingy Bear & Nugget Teach Muse, AI assistant course, learn AI, BRAVE method, AI workflows, Chris Pick",
      canonical=BASE + "/",
-     og_title="Clingy Bear Teaches — Real projects. Better AI. No prompt theater.",
+     og_title="Clingy Bear & Nugget Teach Muse — Real projects. Better AI. No prompt theater.",
      og_desc=BIO,
      body_html=home_body, jsonld=home_jsonld)
 
 # ---------------------------------------------------------------- brave
 brave_jsonld = json.dumps({
   "@context": "https://schema.org", "@type": "Article",
-  "headline": "The BRAVE Method — Clingy Bear Teaches",
-  "description": "BRAVE is the signature method behind Clingy Bear Teaches: five habits that turn an AI assistant from a chat window into a capable collaborator.",
+  "headline": "The BRAVE Method — Clingy Bear & Nugget Teach Muse",
+  "description": "BRAVE is the signature method behind Clingy Bear & Nugget Teach Muse: five habits that turn an AI assistant from a chat window into a capable collaborator.",
   "author": {"@type": "Person", "name": "Chris Pick"},
   "publisher": ORG, "mainEntityOfPage": BASE + "/brave/"}, indent=2)
 brave_jsonld = f'<script type="application/ld+json">\n{brave_jsonld}\n</script>'
@@ -372,7 +380,7 @@ pillar_html = "\n".join(
 brave_body = f"""
 {crumbs(("Home", "/"), ("BRAVE", None))}
 <h1>The BRAVE Method</h1>
-<p class="lede">BRAVE is the signature method behind every Clingy Bear Teaches lesson — five habits that turn an AI assistant from a chat window into a capable collaborator. Software engineer Chris Pick built it from real projects: mining-claim research, text-message analysis, travel hacking, vineyard media production, music albums, shipped apps, and business operations. On-screen shorthand: <strong>Brief → Context → Action → Verify → Remember.</strong></p>
+<p class="lede">BRAVE is the signature method behind every Clingy Bear & Nugget Teach Muse lesson — five habits that turn an AI assistant from a chat window into a capable collaborator. Software engineer Chris Pick built it from real projects: mining-claim research, text-message analysis, travel hacking, vineyard media production, music albums, shipped apps, and business operations. On-screen shorthand: <strong>Brief → Context → Action → Verify → Remember.</strong></p>
 <div class="pillars">
 {pillar_html}
 </div>
@@ -383,12 +391,12 @@ brave_body = f"""
 </section>"""
 
 page("brave/index.html",
-     title="The BRAVE Method — 5 Habits for Working with AI | Clingy Bear Teaches",
-     desc="BRAVE is the signature method behind Clingy Bear Teaches: Brief the outcome, Reveal context, Authorize action, Verify evidence, Evolve the system. Five habits for turning an AI assistant into a collaborator.",
-     keywords="BRAVE method, AI collaboration method, prompt framework, AI assistant workflow, Clingy Bear Teaches",
+     title="The BRAVE Method — 5 Habits for Working with AI | Clingy Bear & Nugget Teach Muse",
+     desc="BRAVE is the signature method behind Clingy Bear & Nugget Teach Muse: Brief the outcome, Reveal context, Authorize action, Verify evidence, Evolve the system. Five habits for turning an AI assistant into a collaborator.",
+     keywords="BRAVE method, AI collaboration method, prompt framework, AI assistant workflow, Clingy Bear & Nugget Teach Muse",
      canonical=BASE + "/brave/",
      og_title="The BRAVE Method — 5 Habits for Working with AI",
-     og_desc="Brief the outcome. Reveal relevant context. Authorize the next action. Verify the evidence. Evolve the system. The signature method behind Clingy Bear Teaches.",
+     og_desc="Brief the outcome. Reveal relevant context. Authorize the next action. Verify the evidence. Evolve the system. The signature method behind Clingy Bear & Nugget Teach Muse.",
      body_html=brave_body, jsonld=brave_jsonld)
 
 # ---------------------------------------------------------------- season-1 index
@@ -401,7 +409,7 @@ items = [{
 s1_jsonld = json.dumps({
  "@context": "https://schema.org",
  "@graph": [
-  {"@type": "VideoSeries", "name": "Clingy Bear Teaches — Season 1",
+  {"@type": "VideoSeries", "name": "Clingy Bear & Nugget Teach Muse — Season 1",
    "url": BASE + "/season-1/",
    "description": "Twelve lessons from software engineer Chris Pick on turning an AI assistant into a capable collaborator, anchored in real projects.",
    "publisher": ORG, "numberOfEpisodes": 12},
@@ -424,11 +432,11 @@ s1_body = f"""
 </div>"""
 
 page("season-1/index.html",
-     title="Season 1 — All 12 Episodes | Clingy Bear Teaches",
-     desc="All 12 Season 1 lessons of Clingy Bear Teaches: from the BRAVE method through research, travel, media, music, shipped apps, business ops, orchestration, and the capstone. Lessons dropping soon.",
-     keywords="Clingy Bear Teaches season 1, AI course episodes, BRAVE method lessons, learn AI workflows",
+     title="Season 1 — All 12 Episodes | Clingy Bear & Nugget Teach Muse",
+     desc="All 12 Season 1 lessons of Clingy Bear & Nugget Teach Muse: from the BRAVE method through research, travel, media, music, shipped apps, business ops, orchestration, and the capstone. Lessons dropping soon.",
+     keywords="Clingy Bear & Nugget Teach Muse season 1, AI course episodes, BRAVE method lessons, learn AI workflows",
      canonical=BASE + "/season-1/",
-     og_title="Season 1 — All 12 Episodes | Clingy Bear Teaches",
+     og_title="Season 1 — All 12 Episodes | Clingy Bear & Nugget Teach Muse",
      og_desc="Twelve lessons from first brief to capstone ship: BRAVE method, evidence-first research, travel hacking, media production, music, shipped apps, and more.",
      body_html=s1_body, jsonld=s1_jsonld)
 
@@ -441,7 +449,7 @@ def episode_ld(n, slug, title, tag, longdesc):
        "description": longdesc[:280],
        "url": f"{BASE}/season-1/ep-{n}-{slug}/",
        "author": {"@type": "Person", "name": "Chris Pick"},
-       "partOfSeries": {"@type": "VideoSeries", "name": "Clingy Bear Teaches — Season 1",
+       "partOfSeries": {"@type": "VideoSeries", "name": "Clingy Bear & Nugget Teach Muse — Season 1",
                         "url": BASE + "/season-1/"}},
       {"@type": "BreadcrumbList", "itemListElement": [
         {"@type": "ListItem", "position": 1, "name": "Home", "item": BASE + "/"},
@@ -491,16 +499,16 @@ for n, slug, title, tag, longdesc, beats in EPISODES:
 <p>Every episode runs through the <a href="/brave/">BRAVE method</a>: brief the outcome, reveal relevant context, authorize the next action, verify the evidence, and evolve the system.</p>
 <section class="cta-box">
 <h2>Watch it first on YouTube</h2>
-<p><a class="cta" href="{YT}">▶ Clingy Bear Teaches on YouTube</a></p>
+<p><a class="cta" href="{YT}">▶ Clingy Bear & Nugget Teach Muse on YouTube</a></p>
 </section>
 {prevnext(n, slug)}"""
     meta_desc = (tag + " " + longdesc)[:155].rsplit(" ", 1)[0] + "…"
     page(f"season-1/ep-{n}-{slug}/index.html",
-         title=f"Episode {n}: {title} | Clingy Bear Teaches",
+         title=f"Episode {n}: {title} | Clingy Bear & Nugget Teach Muse",
          desc=meta_desc,
          keywords=EP_KW + f", episode {n}",
          canonical=canon,
-         og_title=f"Episode {n}: {title} — Clingy Bear Teaches",
+         og_title=f"Episode {n}: {title} — Clingy Bear & Nugget Teach Muse",
          og_desc=tag,
          body_html=body, jsonld=episode_ld(n, slug, title, tag, longdesc))
 
