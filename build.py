@@ -63,6 +63,12 @@ FOOTER = """<footer>
 <a href="{th}">🧵 Threads</a>
 <a href="{tt}">🎵 TikTok</a>
 </nav>
+<nav class="socials empire" aria-label="More from Clingy Bear">
+<span class="empire-label">More from Clingy Bear:</span>
+<a href="https://www.nomorebeeps.com">NoMoreBeeps</a>
+<a href="https://vmenu.com">VMenu</a>
+<a href="https://learnmuse.ai">Learn Muse AI</a>
+</nav>
 <p>Clingy Bear & Nugget Teach Muse · <a href="{yt}">youtube.com/@ClingyBearTeaches</a></p>
 <p>A Clingy Bear Production</p>
 </footer>""".format(yt=YT, ig=IG, th=TH, tt=TT)

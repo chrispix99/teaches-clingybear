@@ -74,6 +74,7 @@ footer a{color:var(--pink-deep)}
 .socials{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;margin-bottom:18px}
 .socials a{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid #f6d9e7;padding:12px 22px;border-radius:999px;text-decoration:none;color:var(--ink);font-weight:600;box-shadow:0 3px 12px rgba(43,35,48,.06)}
 .socials a:hover{border-color:var(--pink);color:var(--pink-deep)}
+.empire-label{align-self:center;color:var(--muted);font-weight:600}
 main a{color:var(--pink-deep)}
 /* episode media slots */
 .media{padding-top:8px}
