@@ -30,6 +30,19 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-S5WCYTCSVP');
 </script>
+<!-- Geo enrichment: log visitor city + carrier/ISP to GA4 (fail-silent, once per session) -->
+<script>
+(function(){'use strict';var GEO_URL='https://ipinfo.io/json?token=2e82db2a53ac1c';var KEY='cb_geo_logged_v1';
+function send(g){try{if(typeof gtag!=='function')return;
+var org=g.org||((g.asn?g.asn+' ':'')+(g.as_name||'')).trim()||'(not set)';
+gtag('event','visitor_geo',{geo_city:g.city||'(not set)',geo_region:g.region||'(not set)',geo_country:g.country||g.country_code||'(not set)',geo_org:org});
+try{sessionStorage.setItem(KEY,'1');}catch(e){}}catch(e){}}
+function lookup(){try{if(sessionStorage.getItem(KEY))return;}catch(e){}
+var c,t;try{c=new AbortController();t=setTimeout(function(){try{c.abort();}catch(e){}},4000);}catch(e){return;}
+fetch(GEO_URL,{signal:c.signal,credentials:'omit'}).then(function(r){clearTimeout(t);return r.ok?r.json():null;})
+.then(function(g){if(g&&g.ip)send(g);}).catch(function(){});}
+if(document.readyState==='complete')lookup();else window.addEventListener('load',lookup);})();
+</script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
